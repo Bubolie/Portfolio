@@ -8,3 +8,4 @@ import headerComp from './components/headerComp.vue'
   <headerComp/>
   <footerComp/>
 </template>
+

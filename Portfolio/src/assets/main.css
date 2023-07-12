@@ -27,13 +27,17 @@ img {
 }
 
 html {
-  background-color: #F7E7D0;
+  background-color: #F9F0E3;
 }
 h1 {
   margin: 10px;
   font-family: 'Purple Purse', cursive;
   font-size: 50px;
   font-weight: bold;
+}
+nav{
+  font-family: 'Purple Purse', cursive;
+
 }
 
 ul {
