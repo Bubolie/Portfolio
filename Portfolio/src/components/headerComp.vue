@@ -5,14 +5,13 @@ import { RouterLink, RouterView } from 'vue-router';
 
 <template>
   <header>
-    <h1>Portfolio d'Elodie Besen</h1>
-    <img alt="Photo d'identité d'une femme de type occidental, blonde aux yeux bleu" class="photo" src="../assets/image/photoProfil.png"/>
-    <nav>
+       <nav>
         <ul>
-          <li><RouterLink to="/">Je me présente...</RouterLink></li>
+          <li><RouterLink to="/">Qui suis-je ?</RouterLink></li>
           <li><RouterLink to="/creation">Mes Créations</RouterLink></li>
-          <li><RouterLink to="/contact">Me contacter ? Par ici...</RouterLink></li>
+          <li><RouterLink to="/contact">Me contacter</RouterLink></li>
         </ul>
+        <img src="../assets/gif/logoEB.gif" alt="Logo avec les initiales E et B en violet sur fond crème">
       </nav>
     
 </header>
@@ -22,29 +21,15 @@ import { RouterLink, RouterView } from 'vue-router';
 
 <style scoped>
 header { 
-  display: flex;
   padding: 1em;
-  flex-wrap: wrap;
   background-color: #400738;
-
-}
-
-h1 {
-display: flex;
-margin: 0.5em;
-justify-content: center;
-align-items: center;
-flex-basis: 90%;
-font-size: 4em;
-  color: #F7E7D0;
-  z-index: 1;
 }
 
 nav {
+  height:125px; 
   display: flex;
-  width: 100%;
+  align-items: center;
   justify-content:center;
-
 }
 
 ul {
@@ -53,11 +38,11 @@ ul {
 }
 
 li {
-  margin: 10px;
-  padding:10px;
+  margin: 10px 25px;
+  font-size: 24px;
 }
 li:hover {
-    font-size: 20px;
+    font-size: 30px;
 
 }
 a{
@@ -65,15 +50,20 @@ a{
   color: #F7E7D0;
 }
  a:hover {
-      opacity: 70%;
+      opacity: 60%;
       color: #93B5F4;
 }
-
 
 img{
     position: fixed;
     width: 125px;
-    align-items: end;
-    right: 20px;
-    }
+    right: 1em;
+    top: 1em;
+    border: 3px solid #400738;
+    border-radius: 20%;
+}
+img:hover {
+  width: 250px;
+}
+
 </style>
