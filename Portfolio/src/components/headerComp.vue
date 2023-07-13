@@ -1,17 +1,17 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router';
-
+import '../assets/CSS/styleComp.css'
 </script>
 
 <template>
   <header>
-       <nav>
-        <ul>
-          <li><RouterLink to="/">Qui suis-je ?</RouterLink></li>
-          <li><RouterLink to="/creation">Mes Créations</RouterLink></li>
-          <li><RouterLink to="/contact">Me contacter</RouterLink></li>
+       <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item"><RouterLink to="/">Qui suis-je ?</RouterLink></li>
+          <li class="menu__item"><RouterLink to="/creation">Mes Créations</RouterLink></li>
+          <li class="menu__item"><RouterLink to="/contact">Me contacter</RouterLink></li>
         </ul>
-        <img src="../assets/gif/logoEB.gif" alt="Logo avec les initiales E et B en violet sur fond crème">
+        <img class="menu__logo" src="../assets/gif/logoEB.gif" alt="Logo avec les initiales E et B en violet sur fond crème">
       </nav>
     
 </header>
@@ -19,8 +19,8 @@ import { RouterLink, RouterView } from 'vue-router';
   <RouterView />
 </template>
 
-<style scoped>
-header { 
+<!-- <style scoped> -->
+/* header { 
   padding: 1em;
   background-color: #400738;
 }
@@ -64,6 +64,6 @@ img{
 }
 img:hover {
   width: 250px;
-}
+} */
 
-</style>
+<!-- </style> -->

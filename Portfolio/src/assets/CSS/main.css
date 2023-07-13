@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Purple+Purse&family=Raleway:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Jomolhari&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
 
 /* Reset CSS */
 html {
@@ -31,13 +32,11 @@ html {
 }
 h1 {
   margin: 10px;
-  font-family: 'Purple Purse', cursive;
   font-size: 50px;
   font-weight: bold;
 }
-nav{
-  font-family: 'Purple Purse', cursive;
-
+html {
+  font-family: 'Lilita One', cursive;
 }
 
 ul {
@@ -45,8 +44,12 @@ ul {
 }
 
 p{
-  font-family: 'Jomolhari', serif;
-  text-align: justify;
+  font-family: 'Yatra One', cursive;
+    text-align: justify;
   margin: 10px;
   text-indent: 1em;
 } 
+
+a:hover {
+  opacity: 50%;
+}
