@@ -8,7 +8,7 @@ header {
   height:125px; 
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: space-around;
 }
 
 .menu__list {
@@ -23,7 +23,7 @@ header {
 
 .menu__item a {
   text-decoration: none;
-  color: #F7E7D0;
+  color: #93B5F4;
 }
 
 .menu__item:hover {
@@ -62,4 +62,7 @@ footer {
 
 .update {
   text-align: center;
+  padding-bottom: 20px;
+  font-size: small;
+  color: #93B5F4;
 }

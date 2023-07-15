@@ -29,14 +29,23 @@ img {
 
 html {
   background-color: #F9F0E3;
+  font-family: 'Lilita One', cursive;
+  color: #270304;
 }
+
 h1 {
   margin: 10px;
   font-size: 50px;
   font-weight: bold;
+  text-decoration: underline dotted #93B5F4;
+
 }
-html {
-  font-family: 'Lilita One', cursive;
+
+h2{
+  font-family: 'Yatra One', cursive;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
 }
 
 ul {
@@ -45,7 +54,7 @@ ul {
 
 p{
   font-family: 'Yatra One', cursive;
-    text-align: justify;
+  text-align: justify;
   margin: 10px;
   text-indent: 1em;
 } 

@@ -1,5 +1,16 @@
+<script setup>
+import CV from '../components/CV.vue'
+import CDC from '../components/CDC.vue'
+import espaceCom from '../components/espaceCom.vue'
+
+</script>
+
 <template>
-  <div class="creation">
-    <h1>Voici mes créations</h1>
-  </div>
+  <section class="creation">
+    <div><CV/></div>
+    <div><CDC/></div>
+    <div><espaceCom/></div>
+
+
+  </section>
 </template>
