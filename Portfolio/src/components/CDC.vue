@@ -13,7 +13,7 @@
 <style scoped>
 .creation {
   display: flex;
-  margin: 50px;
+  padding: 50px;
   align-items: center;
   justify-content: center;
 }

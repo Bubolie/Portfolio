@@ -4,7 +4,7 @@
       <img src="../assets/image/imageEspace Com.png" alt="Image d'un espace de commentaires" />
     </div>
     <div class="creation__info">
-      <h2 class="creation__tittle">Espace de commentaires</h2>
+      <h2 class="creation__title">Espace de commentaires</h2>
       <button class="creation__moreDetail">Plus de détails</button>
     </div>
   </section>
@@ -20,6 +20,7 @@
 
 .creation__info{
   margin: 20px;
+  width: 300px;
 }
 
 .creation__title {
@@ -28,6 +29,7 @@
 .creation__image {
   width: 300px;
   position: relative;
+  margin: 20px;
 }
 .creation__moreDetail {
   height: 25px;

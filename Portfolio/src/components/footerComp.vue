@@ -23,3 +23,29 @@
     </div>
   </footer>
 </template>
+
+
+<style scoped>
+
+footer {
+  background-color: #400738;
+  border-top: solid 3px #93B5F4;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link__logo {
+  width: 40px;
+}
+
+.update {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: small;
+  color: #93B5F4;
+}
+</style>

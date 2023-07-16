@@ -17,7 +17,7 @@
           nouvel aspect : les aider à créer et développer leur propre site web.
         </p>
         <p class="profil__para">
-          Ainsi,je me suis formée dans le Développement Web et Web Mobile et
+          Ainsi, je me suis formée dans le Développement Web et Web Mobile et
           j’ai le plaisir maintenant d’être à votre service dans ce secteur pour
           pouvoir laisser mon esprit créatif fleurir et en continuant
           d’apprendre chaque jour de nouvelle chose dans un domaine en constante
