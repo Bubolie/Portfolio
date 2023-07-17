@@ -1,14 +1,18 @@
 <script setup></script>
 
 <template>
-  <main>
+  <section id="main">
     <h1 class="title">Bienvenue sur mon Portfolio</h1>
     <h2 class="subtitle">
-      Je me présente : je suis Elodie, Développeuse web et web mobile.
+      Je me présente : <br>
+      Je m'appelle Elodie BESEN, j'ai 30 ans et je suis Développeuse web et web mobile.
     </h2>
-    <!-- <video class="profil__video" src="../assets/video/Fleur1.mp4" type="video/mp4" autoplay loop muted></video> -->
     <div class="profil">
-      <img alt="" class="profil__photo" src="../assets/image/photo.png" />
+      <img
+        alt="Photo en noir et blanc d'une femme blonde avec lunette de soleil dans un port"
+        class="profil__photo"
+        src="../assets/image/photo.png"
+      />
       <div class="profil__text">
         <p class="profil__para">
           Après avoir pris soin des autres au travers du métier d’infirmière,
@@ -24,44 +28,38 @@
           évolution afin d’être plus performante pour vous.
         </p>
       </div>
-      
     </div>
-  </main>
+  </section>
 </template>
 
 <style scoped>
-.title {
-  margin: 50px 120px;
-  text-align: center;
-  font-family: "Fleur De Leah", cursive;
-  font-size: 75px;
+#main {
+  margin: 10px;
 }
 
 .profil__para {
   margin: 40px;
 }
 
+.subtitle {
+  padding: 10px 100px;
+}
 .profil__photo {
   position: relative;
-  margin: 50px 20px 50px 100px;
-  width: 500px;
-  box-shadow: 10px 10px 20px #400738,-8px -8px 10px #270304;
-  border-radius: 30%;
+  margin: 50px 70px;
+  box-shadow: 10px 10px 20px #400738, -8px -8px 10px #270304;
+  border-radius: 40%;
+  width: 40%;
 }
 
 .profil__text {
-  margin: 50px 100px 50px 20px;
+  margin: 40px;
 }
 
 .profil {
   display: flex;
-  flex-basis: 50%;
+  /* flex-basis: 50%; */
   align-items: center;
+  justify-content: space-around;
 }
-
-/*.profil__video {
-  width: 200px;
-  opacity: 50%;
-  position: relative; 
-}*/
 </style>

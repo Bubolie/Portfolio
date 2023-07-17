@@ -6,6 +6,9 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  background-color: #F9F0E3;
+  font-family: 'Lilita One', cursive;
+  color: #270304;
 }
 
 *, *:before, *:after {
@@ -27,19 +30,16 @@ img {
   height: auto;
 }
 
-html {
-  background-color: #F9F0E3;
-  font-family: 'Lilita One', cursive;
-  color: #270304;
-}
-
 h1 {
-  margin: 10px;
   font-size: 50px;
   font-weight: bold;
+  font-family: "Fleur De Leah", cursive;
+  text-align: center;
+  padding: 20px;
+  font-size: 75px;
 }
 
-h2{
+h2 {
   font-family: 'Yatra One', cursive;
   text-align: center;
   font-size: 30px;
@@ -50,12 +50,12 @@ ul {
   font-size: 20px;
 }
 
-p{
+p {
   font-family: 'Yatra One', cursive;
   text-align: justify;
   margin: 10px;
   text-indent: 1em;
-} 
+}
 
 a:hover {
   opacity: 60%;

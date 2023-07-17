@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
 </script>
 
 <template>
@@ -7,13 +7,13 @@ import { RouterLink, RouterView } from "vue-router";
     <nav class="menu">
       <ul class="menu__list">
         <li class="menu__item">
-          <RouterLink to="/">Qui suis-je ?</RouterLink>
+          <a href="#main">Qui suis-je ?</a>
         </li>
         <li class="menu__item">
-          <RouterLink to="/creation">Mes Créations</RouterLink>
+          <a href="#project">Mes Créations</a>
         </li>
         <li class="menu__item">
-          <RouterLink to="/contact">Me contacter</RouterLink>
+          <a href="#contact">Me contacter</a>
         </li>
       </ul>
       <img
@@ -28,17 +28,18 @@ import { RouterLink, RouterView } from "vue-router";
 </template>
 
 <style scoped>
-header { 
+header {
   padding: 1em;
   background-color: #400738;
-  border-bottom: solid #93B5F4 3px;
+  border-bottom: solid #93b5f4 6px;
 }
 
 .menu {
-  height: 75px; 
+  height: 75px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: sticky;
 }
 
 .menu__list {
@@ -53,23 +54,23 @@ header {
 
 .menu__item a {
   text-decoration: none;
-  color: #93B5F4;
+  color: #93b5f4;
 }
 
 .menu__item:hover {
-    font-size: 25px;
-    border-left: solid 1px #93B5F4;
-    border-right: solid 1px #93B5F4;
-    padding : 5px;
+  font-size: 25px;
+  border-left: solid 1px #93b5f4;
+  border-right: solid 1px #93b5f4;
+  padding: 5px;
 }
 
 .menu__logo {
-    position: fixed;
-    width: 75px;
-    right: 1em;
-    top: 1em;
-    border: 3px solid #93B5F4;
-    border-radius: 20%;
+  position: fixed;
+  width: 75px;
+  right: 1em;
+  top: 1em;
+  border: 3px solid #93b5f4;
+  border-radius: 20%;
 }
 
 .menu__logo:hover {

@@ -18,18 +18,19 @@
       </figure>
     </div>
     <div class="update">
-      Dernière mise à jour
-      <small><time datetime="2023-07-13">13 juillet 2023</time></small>
+      <small
+        >Copyright 2023 <br />
+        Dernière mise à jour
+        <time datetime="2023-07-13">13 juillet 2023</time></small
+      >
     </div>
   </footer>
 </template>
 
-
 <style scoped>
-
 footer {
   background-color: #400738;
-  border-top: solid 3px #93B5F4;
+  border-top: solid 6px #93b5f4;
 }
 
 .link {
@@ -39,13 +40,14 @@ footer {
 }
 
 .link__logo {
-  width: 40px;
+  width: 35px;
+  margin: 10px;
 }
 
 .update {
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   font-size: small;
-  color: #93B5F4;
+  color: #93b5f4;
 }
 </style>
