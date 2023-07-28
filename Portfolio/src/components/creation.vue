@@ -3,6 +3,7 @@ import Modal from "../components/modal.vue";
 import { ref } from "vue";
 
 const showModal = ref(false);
+
 </script>
 
 <template>
@@ -16,22 +17,22 @@ const showModal = ref(false);
       />
       <div class="creation__info">
         <h2 class="creation__title">Curriculum Vitae</h2>
-        
+
         <div id="button-modal">
           <button class="creation__moreDetail" @click="showModal = true">
             Plus de détail
           </button>
-          <Teleport to="body">
-            <modal :show="showModal" @close="showModal = false"
-            title="Curriculum Vitae"
-            lang="HTML et CSS"
-            logiciel="Virtual Studio Code"
-            date="30 mai 2023"
-            link="Voir sur GitHub : ici"
+            <modale1
+              :show="showModal"
+              @close="showmodal = false"
+              title="Curriculum Vitae"
+              lang="HTML et CSS"
+              logiciel="Virtual Studio Code"
+              date="30 mai 2023"
+              link="Voir sur GitHub : ici"
             >
-            </modal>
-          </Teleport>
-        </div>
+            </modale1>
+                  </div>
       </div>
     </section>
 
@@ -47,15 +48,15 @@ const showModal = ref(false);
           <button class="creation__moreDetail" @click="showModal = true">
             Plus de détail
           </button>
-          <Teleport to="body">
-            <modal :show="showModal" @close="showModal = false"
+          <modal name="CDC"
+            :show="showModal"
+            @close="showModal = false"
             title="Cahier des Charges"
             logiciel="Word"
             date="11 juin 2023"
             link="Voir un extrait du PDF ici"
-            >
-            </modal>
-          </Teleport>
+          >
+          </modal>
         </div>
         <div></div>
       </div>
@@ -69,22 +70,23 @@ const showModal = ref(false);
       />
       <div class="creation__info">
         <h2 class="creation__title">Espace de commentaires</h2>
-        
+
         <div id="button-modal">
           <button class="creation__moreDetail" @click="showModal = true">
             Plus de détail
           </button>
-          <Teleport to="body">
-            <modal :show="showModal" @close="showModal = false"
-            title="Espace de commentaires"
-            lang="HTML, CSS et JavaScript"
-            logiciel="Virtual Studio Code"
-            date="30 juin 2023"
-            link="Voir sur GitHub : ici"
+            <modal name="espaceCom"
+              :show="showModal"
+              @close="showModal = false"
+              title="Espace de commentaires"
+              lang="HTML, CSS et JavaScript"
+              logiciel="Virtual Studio Code"
+              date="30 juin 2023"
+              link="Voir sur GitHub : ici"
             >
             </modal>
-          </Teleport>
-        </div>      </div>
+        </div>
+      </div>
     </section>
   </section>
 </template>
@@ -134,5 +136,4 @@ const showModal = ref(false);
   background-color: #400738;
   color: #f9f0e3;
 }
-
 </style>

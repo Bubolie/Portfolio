@@ -1,27 +1,14 @@
 <template>
   <Transition name="modal">
-    <div v-if="show" class="modal__mask">
-      <div class="modal__container">
-        <div class="modal__header">
-          <slot name="title">{{title}}</slot>
-        </div>
-
-        <div class="modal__body">
-          <slot name="lang">Langages utilisés : {{ lang }}</slot>
-        </div>
-        <div class="modal__body">
-          <slot name="date">Date de création : {{ date }}</slot>
-        </div>
-        <div class="modal__body">
-          <slot name="logiciel">Logiciel utilisé : {{ logiciel }}</slot>
-        </div>
-        <div class="modal__body">
-          <slot name="link">{{ link }}</slot>
-        </div>
-        <div class="modal__footer">
-          <slot name="footer">
-            <button class="modal__button" @click="$emit('close')">OK</button>
-          </slot>
+    <div v-if="show" class="modal__overlay">
+      <div class="modal__border">
+        <button class="modal__button" @click="$emit('close')">X</button>
+        <div class="modal__container">
+          <h3 class="modal__title">{{ title }}</h3>
+          <p class="modal__body">Langages utilisés : {{ lang }}</p>
+          <p class="modal__body">Date de création : {{ date }}</p>
+          <p class="modal__body">Logiciel utilisé : {{ logiciel }}</p>
+          <p class="modal__body">{{ link }}</p>
         </div>
       </div>
     </div>
@@ -35,57 +22,75 @@ const props = defineProps({
   lang: String,
   logiciel: String,
   date: String,
-  link: String,  
+  link: String,
 });
+
+// export default {
+
+// }
+
 </script>
 
-<style>
-.modal__mask {
+<style scoped>
+.modal__overlay {
   position: fixed;
-  z-index: 9998;
   top: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  right: 0;
   display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
   transition: opacity 0.3s ease;
 }
 
-.modal__container {
-  width: 300px;
-  margin: auto;
-  padding: 20px 30px;
-  background-color: #fff;
-  border-radius: 2px;
+.modal__border {
+  margin-top: 20%;
+  width: 450px;
+  height: 300px;
+  background-color: #f9f0e3;
+  border: solid 5px #93b5f4;
+  border-radius: 50px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
-  transition: all 0.3s ease;
+  transition: all 2s ease;
 }
-
-.modal__header {
+.modal__container {
+  padding: 20px;
+}
+.modal__title {
   margin-top: 0;
-  color: #42b983;
+  color: #400738;
+  font-weight: bold;
 }
 
 .modal__body {
   margin: 20px 0;
 }
 
-.modal-default-button {
+.modal__button {
   float: right;
+  padding: 7px;
+  background-color: #400738;
+  color: #93b5f4;
+  border: solid 4px #93b5f4;
+  border-radius: 40%;
 }
 
-.modal-enter-from {
+/* .modal-default-button {
+  float: right;
+} */
+
+/* .modal-enter-from {
   opacity: 0;
-}
+} */
 
-.modal-leave-to {
+/* .modal-leave-to {
   opacity: 0;
-}
+} */
 
-.modal-enter-from .modal-container,
+/* .modal-enter-from .modal-container,
 .modal-leave-to .modal-container {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-}
+}  */
 </style>

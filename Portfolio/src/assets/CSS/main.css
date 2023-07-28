@@ -60,3 +60,6 @@ p {
 a:hover {
   opacity: 60%;
 }
+button:hover{
+  cursor: pointer;
+}

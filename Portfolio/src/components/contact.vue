@@ -1,4 +1,25 @@
-<script setup>
+<script>
+export default {
+  data() {
+    return {
+      firstName: "",
+      lastName: "",
+      email: "",
+      subject: "",
+      message: "",
+    };
+  },
+  methods: {
+    submitForm() {
+      this.firstName = "";
+      this.lastName = "";
+      this.email = "";
+      this.subject = "";
+      this.message = "";
+      alert("Merci pour message !");
+    },
+  },
+};
 
 </script>
 
@@ -7,20 +28,28 @@
     <h1 class="contact__title">Vous souhaitez me contacter ?</h1>
     <p class="contact__presentation">
       Merci de completer ce formulaire, je me ferais un plaisir de vous répondre
-      dans les meilleures délais
+      dans les meilleurs délais
     </p>
-    <form action="#" class="contact__formulaire container">
+    <form
+      id="contact-Form"
+      action="mailto:elodie41.m@gmail.com"
+      method="post"
+      enctype="text/plain"
+      @submit="submitForm"
+      class="contact__formulaire container"
+    >
       <div class="container__name">
         <input
           type="text"
           name="first-name"
+          v-model="firstName"
           class="container__nametext text"
           placeholder="Prénom"
-          required
         />
         <input
           type="text"
           name="last-name"
+          v-model="lastName"
           class="container__nametext text"
           placeholder="Nom"
           required
@@ -29,6 +58,7 @@
       <input
         type="email"
         name="email"
+        v-model="email"
         class="container__email text"
         placeholder="Votre e-mail"
         required
@@ -36,6 +66,7 @@
       <input
         type="text"
         name="subject"
+        v-model="subject"
         class="container__subject text"
         placeholder="Objet du message"
         required
@@ -43,6 +74,7 @@
       <textarea
         type="text"
         name="message"
+        v-model="message"
         class="container__message text"
         placeholder="Votre message..."
         required
