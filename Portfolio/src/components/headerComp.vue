@@ -49,7 +49,7 @@ header {
 
 .menu__item {
   margin: 10px 25px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .menu__item a {
@@ -58,10 +58,12 @@ header {
 }
 
 .menu__item:hover {
-  font-size: 25px;
+  transition: 1s ease;
+  font-size: 20px;
   border-left: solid 1px #93b5f4;
   border-right: solid 1px #93b5f4;
   padding: 5px;
+  text-decoration: underline #93b5f4;
 }
 
 .menu__logo {
@@ -75,5 +77,6 @@ header {
 
 .menu__logo:hover {
   width: 250px;
+  transition: 1500ms ease-in-out;
 }
 </style>

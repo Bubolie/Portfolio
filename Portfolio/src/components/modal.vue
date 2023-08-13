@@ -1,5 +1,4 @@
 <template>
-  <Transition name="modal">
     <div v-if="modalVisible" class="modal__overlay" @click="closeModal">
       <div class="modal__border" @click.stop>
         <button class="modal__button" @click="closeModal">X</button>
@@ -8,11 +7,10 @@
           <p class="modal__body">Langages utilisés : {{ lang }}</p>
           <p class="modal__body">Date de création : {{ date }}</p>
           <p class="modal__body">Logiciel utilisé : {{ logiciel }}</p>
-          <p class="modal__body">{{ link }}</p>
+          <p class="modal__body">{{description}} <a :href="link" target="_blank">ici</a> </p>
         </div>
       </div>
     </div>
-  </Transition>
 </template>
 
 <script>
@@ -23,6 +21,7 @@ export default {
     lang: String,
     logiciel: String,
     date: String,
+    description: String,
     link: String,
   },
   methods: {
@@ -43,8 +42,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal__border {
@@ -53,8 +51,6 @@ export default {
   background-color: #f9f0e3;
   border: solid 5px #93b5f4;
   border-radius: 50px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
-  /* transition: all 2s ease; */
 }
 
 .modal__container {
@@ -65,6 +61,8 @@ export default {
   margin-top: 0;
   color: #400738;
   font-weight: bold;
+  font-size: 30px;
+  text-align: center;
 }
 
 .modal__body {
@@ -79,4 +77,5 @@ export default {
   border: solid 4px #93b5f4;
   border-radius: 40%;
 }
+
 </style>

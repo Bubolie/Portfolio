@@ -16,15 +16,19 @@
         </div>
       </div>
     </section>
-    <Modal
+    
+    <Transition name="modal">
+       <Modal
       :modalVisible="activeModal !== null"
       :title="activeModal ? activeModal.title : ''"
       :lang="activeModal ? activeModal.lang : ''"
       :logiciel="activeModal ? activeModal.logiciel : ''"
       :date="activeModal ? activeModal.date : ''"
+      :description=" activeModal ? activeModal.description : ''"
       :link="activeModal ? activeModal.link : ''"
       @close="hideModal"
     />
+    </Transition>
   </section>
 </template>
 
@@ -41,9 +45,10 @@ const projects = [
     lang: "HTML et CSS",
     logiciel: "Virtual Studio Code",
     date: "30 mai 2023",
-    link: "Voir sur GitHub : ",
+    description: "Pour voir sur GitHub, cliquez ",
+    link: "https://github.com/Bubolie/Curriculum-Vitae.git",
   },
-  {
+  { 
     title: "Cahier des Charges",
     image: "./src/assets/image/imageCDC.png",
     descriptionImage:
@@ -51,7 +56,8 @@ const projects = [
     lang: "Word",
     logiciel: "Word",
     date: "11 juin 2023",
-    link: "Voir un extrait du PDF ici",
+    description: "Pour voir un extrait du PDF, cliquez ",
+    link: "/src/assets/Documents/CDC-socketterie-extrait.pdf",
   },
   {
     title: "Espace de commentaires",
@@ -61,7 +67,8 @@ const projects = [
     lang: "HTML, CSS et JavaScript",
     logiciel: "Virtual Studio Code",
     date: "30 juin 2023",
-    link: "Voir sur GitHub : ici",
+    description: "Pour voir sur GitHub, cliquez ",
+    link: "https://github.com/Bubolie/espaceDeCommentaire.git",
   },
   // d'autres porjets peuvent être ajouter ici
 ];
@@ -125,6 +132,10 @@ export default {
   max-width: 400px;
 }
 
+.creation__image:hover {
+  box-shadow: 25px 15px 15px;
+}
+
 .creation__moreDetail {
   border-radius: 20px;
   border: solid 3px;
@@ -138,4 +149,13 @@ export default {
   background-color: #400738;
   color: #f9f0e3;
 }
+
+.modal-enter-active, .modal-leave-active {
+  transition: opacity 1500ms;
+}
+
+.modal-enter-from, .modal-leave-to- {
+  opacity: 0;
+}
+
 </style>

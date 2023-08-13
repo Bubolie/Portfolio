@@ -58,7 +58,6 @@
 
 .profil {
   display: flex;
-  /* flex-basis: 50%; */
   align-items: center;
   justify-content: space-around;
 }

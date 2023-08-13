@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import home from '../views/home.vue'
-import page404 from '../views/page404.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import home from '../views/home.vue';
+import notFound from '../views/notFound.vue';
 
 
 const router = createRouter({
@@ -12,11 +12,11 @@ const router = createRouter({
       component: home
     },
     {
-      path: '/',
-      name: 'page404',
-      component: page404
+      path: '/:pathMatch(.*)*',
+      name: 'notFound',
+      component: notFound
     },
   ]
-})
+});
 
-export default router
+export default router;

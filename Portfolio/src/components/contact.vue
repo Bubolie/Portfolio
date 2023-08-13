@@ -145,6 +145,5 @@ export default {
 .container__buttontext:hover {
   background-color: #93b5f4;
   color: #400738;
-  cursor: pointer;
 }
 </style>

@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap');
+
 
 /* Reset CSS */
 html {
   box-sizing: border-box;
   font-size: 16px;
   background-color: #F9F0E3;
-  font-family: 'Lilita One', cursive;
+  font-family: 'Abril Fatface', cursive;
   color: #270304;
 }
 
@@ -33,15 +34,14 @@ img {
 h1 {
   font-size: 50px;
   font-weight: bold;
-  font-family: "Fleur De Leah", cursive;
+  font-family: 'Lobster Two', cursive;
   text-align: center;
   padding: 20px;
   font-size: 75px;
 }
 
 h2 {
-  font-family: 'Yatra One', cursive;
-  text-align: center;
+    text-align: center;
   font-size: 30px;
   font-weight: bolder;
 }
@@ -51,15 +51,17 @@ ul {
 }
 
 p {
-  font-family: 'Yatra One', cursive;
+  font-family: 'Preahvihear', sans-serif;
   text-align: justify;
   margin: 10px;
   text-indent: 1em;
 }
 
 a:hover {
-  opacity: 60%;
+  opacity: 70%;
+  transition: 500ms ease-in-out;
 }
 button:hover{
   cursor: pointer;
+  transition: 500ms ease-in-out;
 }

@@ -12,7 +12,6 @@
   right: 20px;
   background-color: #f9f0e3;
   border: solid 3px;
-  cursor: pointer;
   border-radius: 15px;
 }
 
