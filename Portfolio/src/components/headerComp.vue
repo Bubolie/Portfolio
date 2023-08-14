@@ -1,69 +1,82 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router';
-
+import { RouterView } from "vue-router";
 </script>
 
 <template>
   <header>
-       <nav>
-        <ul>
-          <li><RouterLink to="/">Qui suis-je ?</RouterLink></li>
-          <li><RouterLink to="/creation">Mes Créations</RouterLink></li>
-          <li><RouterLink to="/contact">Me contacter</RouterLink></li>
-        </ul>
-        <img src="../assets/gif/logoEB.gif" alt="Logo avec les initiales E et B en violet sur fond crème">
-      </nav>
-    
-</header>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#main">Qui suis-je ?</a>
+        </li>
+        <li class="menu__item">
+          <a href="#project">Mes Créations</a>
+        </li>
+        <li class="menu__item">
+          <a href="#contact">Me contacter</a>
+        </li>
+      </ul>
+      <img
+        class="menu__logo"
+        src="../assets/image/gif/logoEB.gif"
+        alt="Logo avec les initiales E et B en violet sur fond crème"
+      />
+    </nav>
+  </header>
 
   <RouterView />
 </template>
 
 <style scoped>
-header { 
+header {
   padding: 1em;
   background-color: #400738;
+  border-bottom: solid #93b5f4 6px;
 }
 
-nav {
-  height:125px; 
+.menu {
+  height: 75px;
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: space-around;
+  position: sticky;
 }
 
-ul {
+.menu__list {
   display: flex;
   flex-direction: row;
 }
 
-li {
+.menu__item {
   margin: 10px 25px;
-  font-size: 24px;
+  font-size: 25px;
 }
-li:hover {
-    font-size: 30px;
 
-}
-a{
+.menu__item a {
   text-decoration: none;
-  color: #F7E7D0;
-}
- a:hover {
-      opacity: 60%;
-      color: #93B5F4;
+  color: #93b5f4;
 }
 
-img{
-    position: fixed;
-    width: 125px;
-    right: 1em;
-    top: 1em;
-    border: 3px solid #400738;
-    border-radius: 20%;
+.menu__item:hover {
+  transition: 1s ease;
+  font-size: 20px;
+  border-left: solid 1px #93b5f4;
+  border-right: solid 1px #93b5f4;
+  padding: 5px;
+  text-decoration: underline #93b5f4;
 }
-img:hover {
+
+.menu__logo {
+  position: fixed;
+  width: 75px;
+  right: 1em;
+  top: 1em;
+  border: 3px solid #93b5f4;
+  border-radius: 20%;
+}
+
+.menu__logo:hover {
   width: 250px;
+  transition: 1500ms ease-in-out;
 }
-
 </style>

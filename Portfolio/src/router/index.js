@@ -1,7 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import home from '../views/home.vue'
-import creation from '../views/creation.vue'
-import contact from '../views/contact.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import home from '../views/home.vue';
+import notFound from '../views/notFound.vue';
 
 
 const router = createRouter({
@@ -13,16 +12,11 @@ const router = createRouter({
       component: home
     },
     {
-      path: '/creation',
-      name: 'Mes Créations',
-      component: creation
+      path: '/:pathMatch(.*)*',
+      name: 'notFound',
+      component: notFound
     },
-    {
-      path: '/contact',
-      name: 'Me contacter',
-      component: contact
-    }
   ]
-})
+});
 
-export default router
+export default router;

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+/* Reset CSS */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #F9F0E3;
+  font-family: 'Abril Fatface', cursive;
+  color: #270304;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Lobster Two', cursive;
+  text-align: center;
+  padding: 20px;
+  font-size: 75px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+ul {
+  font-size: 20px;
+}
+
+p {
+  font-family: 'Preahvihear', sans-serif;
+  text-align: justify;
+  margin: 10px;
+  text-indent: 1em;
+}
+
+a:hover {
+  opacity: 70%;
+  transition: 500ms ease-in-out;
+}
+button:hover{
+  cursor: pointer;
+  transition: 500ms ease-in-out;
+}
