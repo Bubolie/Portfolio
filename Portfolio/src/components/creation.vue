@@ -1,13 +1,36 @@
 <template>
   <section id="project">
-    <h1>Mes projets</h1>
-    <section v-for="project in projects" :key="project.title" class="creation">
+    <div class="container">
+      <h1
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="3000"
+        data-oas-anchor-placement="bottom-bottom"
+      >
+        Maintenant, découvrez les différents projets que j'ai déjà réalisé...
+      </h1>
+    </div>
+    <section
+      v-for="project in projects"
+      :key="project.title"
+      class="container creation"
+    >
       <img
         class="creation__image"
         :src="project.image"
         :alt="project.descriptionImage"
+        data-aos="fade-up"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="1500"
+        data-oas-anchor-placement="bottom-bottom"
       />
-      <div class="creation__info">
+      <div
+        class="creation__info"
+        data-aos="fade-left"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="3000"
+        data-oas-anchor-placement="bottom-top"
+      >
         <h2 class="creation__title">{{ project.title }}</h2>
         <div id="button-modal">
           <button class="creation__moreDetail" @click="showModal(project)">
@@ -16,24 +39,24 @@
         </div>
       </div>
     </section>
-    
+
     <Transition name="modal">
-       <Modal
-      :modalVisible="activeModal !== null"
-      :title="activeModal ? activeModal.title : ''"
-      :lang="activeModal ? activeModal.lang : ''"
-      :logiciel="activeModal ? activeModal.logiciel : ''"
-      :date="activeModal ? activeModal.date : ''"
-      :description=" activeModal ? activeModal.description : ''"
-      :link="activeModal ? activeModal.link : ''"
-      @close="hideModal"
-    />
+      <modal
+        :modalVisible="activeModal !== null"
+        :title="activeModal ? activeModal.title : ''"
+        :lang="activeModal ? activeModal.lang : ''"
+        :logiciel="activeModal ? activeModal.logiciel : ''"
+        :date="activeModal ? activeModal.date : ''"
+        :description="activeModal ? activeModal.description : ''"
+        :link="activeModal ? activeModal.link : ''"
+        @close="hideModal"
+      />
     </Transition>
   </section>
 </template>
 
 <script>
-import Modal from "./modal.vue";
+import modal from "./modal.vue";
 import { ref } from "vue";
 
 const projects = [
@@ -48,7 +71,7 @@ const projects = [
     description: "Pour voir sur GitHub, cliquez ",
     link: "https://github.com/Bubolie/Curriculum-Vitae.git",
   },
-  { 
+  {
     title: "Cahier des Charges",
     image: "./src/assets/image/imageCDC.png",
     descriptionImage:
@@ -75,7 +98,7 @@ const projects = [
 
 export default {
   components: {
-    Modal,
+    modal,
   },
   setup() {
     const activeModal = ref(null);
@@ -108,14 +131,12 @@ export default {
   border-top: solid 6px #400738;
 }
 
-.creation {
-  margin-left: 100px;
-  margin-right: 100px;
-  padding: 50px;
-  border-top: solid 3px #400738;
+.container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  height: 100vh;
+  padding: 50px;
 }
 
 .creation__info {
@@ -150,12 +171,12 @@ export default {
   color: #f9f0e3;
 }
 
-.modal-enter-active, .modal-leave-active {
-  transition: opacity 1500ms;
+.modal-enter-active {
+  transition: opacity 2000ms;
 }
 
-.modal-enter-from, .modal-leave-to- {
+.modal-enter-from,
+.modal-leave-to- {
   opacity: 0;
 }
-
 </style>

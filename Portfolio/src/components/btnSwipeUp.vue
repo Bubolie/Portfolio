@@ -1,5 +1,5 @@
 <template>
-  <button id="swipeUp" @click="returnTop">
+  <button id="swipeUp" @click="returnTop" data-aos="fade-up" data-aos-anchor="#project">
     <img src="../assets/image/swipe-up.png" alt="fléche vers le haut" />
   </button>
 </template>

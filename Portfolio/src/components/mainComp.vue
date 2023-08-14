@@ -2,18 +2,21 @@
 
 <template>
   <section id="main">
-    <h1 class="title">Bienvenue sur mon Portfolio</h1>
-    <h2 class="subtitle">
+    <h1 class="title" data-aos="zoom-in" data-aos-duration="2000" data-oas-easing="ease-in-out">Bienvenue sur mon Portfolio</h1>
+    <h2 class="subtitle" data-aos="fade-down" data-aos-delay="2000" data-aos-duration="1000">
       Je me présente : <br>
       Je m'appelle Elodie BESEN, j'ai 30 ans et je suis Développeuse web et web mobile.
     </h2>
-    <div class="profil">
+    <div class="profil" >
       <img
         alt="Photo en noir et blanc d'une femme blonde avec lunette de soleil dans un port"
         class="profil__photo"
         src="../assets/image/photo.png"
+        data-aos="zoom-in-right"
+        data-aos-delay="3000"
+        data-aos-duration="2500"
       />
-      <div class="profil__text">
+      <div class="profil__text" data-aos="zoom-in-left" data-aos-delay="3000" data-aos-duration="2500">
         <p class="profil__para">
           Après avoir pris soin des autres au travers du métier d’infirmière,
           aujourd’hui j’ai changé de carrière pour m’épanouir dans une nouvelle
@@ -35,6 +38,7 @@
 <style scoped>
 #main {
   margin: 10px;
+  min-height: 100vh;
 }
 
 .profil__para {
@@ -46,19 +50,22 @@
 }
 .profil__photo {
   position: relative;
-  margin: 50px 70px;
+  margin: 30px;
   box-shadow: 10px 10px 20px #400738, -8px -8px 10px #270304;
   border-radius: 40%;
   width: 40%;
+  max-width: 600px;
+  height: auto;
 }
 
 .profil__text {
-  margin: 40px;
+  margin: 20px;
 }
 
 .profil {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-top: 20px;
 }
 </style>
