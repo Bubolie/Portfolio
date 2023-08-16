@@ -63,5 +63,6 @@ a:hover {
 }
 button:hover{
   cursor: pointer;
-  transition: 500ms ease-in-out;
+  transition: 400ms ease-in-out;
+  opacity: 70%;
 }

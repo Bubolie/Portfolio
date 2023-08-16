@@ -1,16 +1,26 @@
 <template>
-    <div v-if="modalVisible" class="modal__overlay" @click="closeModal">
-      <div class="modal__border" @click.stop>
-        <button class="modal__button" @click="closeModal">X</button>
-        <div class="modal__container">
-          <h3 class="modal__title">{{ title }}</h3>
-          <p class="modal__body">Langages utilisés : {{ lang }}</p>
-          <p class="modal__body">Date de création : {{ date }}</p>
-          <p class="modal__body">Logiciel utilisé : {{ logiciel }}</p>
-          <p class="modal__body">{{description}} <a :href="link" target="_blank">ici</a> </p>
-        </div>
+  <div v-if="modalVisible" class="modal__overlay" @click="closeModal">
+    <div class="modal__border" @click.stop>
+      <button class="modal__button" @click="closeModal">X</button>
+      <div class="modal__container">
+        <h3 class="modal__title">{{ title }}</h3>
+        <p class="modal__body">
+          <span class="modal__body__item">Langages utilisés</span> : {{ lang }}
+        </p>
+        <p class="modal__body">
+          <span class="modal__body__item">Date de création</span> : {{ date }}
+        </p>
+        <p class="modal__body">
+          <span class="modal__body__item">Logiciel utilisé</span> :
+          {{ logiciel }}
+        </p>
+        <p class="modal__body">
+          <span class="modal__body__item__active">{{ textLink }}</span>
+          <a :href="link" target="_blank">ici</a>
+        </p>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -21,7 +31,7 @@ export default {
     lang: String,
     logiciel: String,
     date: String,
-    description: String,
+    textLink: String,
     link: String,
   },
   methods: {
@@ -69,6 +79,12 @@ export default {
   margin: 20px 0;
 }
 
+.modal__body__item {
+  text-decoration: underline;
+  font-weight: bold;
+
+}
+
 .modal__button {
   float: right;
   padding: 7px;
@@ -77,5 +93,4 @@ export default {
   border: solid 4px #93b5f4;
   border-radius: 40%;
 }
-
 </style>

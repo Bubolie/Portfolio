@@ -3,7 +3,7 @@
 <template>
   <section id="main">
     <h1 class="title" data-aos="zoom-in" data-aos-duration="2000" data-oas-easing="ease-in-out">Bienvenue sur mon Portfolio</h1>
-    <h2 class="subtitle" data-aos="fade-down" data-aos-delay="2000" data-aos-duration="1000">
+    <h2 class="subtitle" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000">
       Je me présente : <br>
       Je m'appelle Elodie BESEN, j'ai 30 ans et je suis Développeuse web et web mobile.
     </h2>
@@ -12,11 +12,11 @@
         alt="Photo en noir et blanc d'une femme blonde avec lunette de soleil dans un port"
         class="profil__photo"
         src="../assets/image/photo.png"
-        data-aos="zoom-in-right"
-        data-aos-delay="3000"
+        data-aos="zoom-in"
+        data-aos-delay="1400"
         data-aos-duration="2500"
       />
-      <div class="profil__text" data-aos="zoom-in-left" data-aos-delay="3000" data-aos-duration="2500">
+      <div class="profil__text" data-aos="zoom-in-left" data-aos-delay="1700" data-aos-duration="2500">
         <p class="profil__para">
           Après avoir pris soin des autres au travers du métier d’infirmière,
           aujourd’hui j’ai changé de carrière pour m’épanouir dans une nouvelle

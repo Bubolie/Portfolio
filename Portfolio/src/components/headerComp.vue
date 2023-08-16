@@ -78,5 +78,6 @@ header {
 .menu__logo:hover {
   width: 250px;
   transition: 1500ms ease-in-out;
+  z-index: 2;
 }
 </style>
