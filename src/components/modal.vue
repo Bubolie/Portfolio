@@ -82,7 +82,6 @@ export default {
 .modal__body__item {
   text-decoration: underline;
   font-weight: bold;
-
 }
 
 .modal__button {

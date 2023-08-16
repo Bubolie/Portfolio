@@ -11,7 +11,10 @@
       </h1>
       <div data-aos="fade-down" data-aos-delay="1000" data-aos-duration="2000">
         <button @click="scrollToFirstProject" id="down">
-          <img src="../assets/image/arrow.png" alt="double flèche vers le bas" />
+          <img
+            src="../assets/image/arrow.png"
+            alt="double flèche vers le bas"
+          />
         </button>
       </div>
     </div>
@@ -81,7 +84,8 @@ const projects = [
   },
   {
     title: "Cahier des Charges",
-    description: "Ce projet avait pour but de créer d'un cahier des charge d'une entrprise fictive La Socketterie.",
+    description:
+      "Ce projet avait pour but de créer d'un cahier des charge d'une entrprise fictive La Socketterie.",
     image: "./src/assets/image/imageCDC.png",
     descriptionImage:
       "Page de couverture d'un cahier des charges pour la Socketterie en rose et noire",
@@ -93,7 +97,8 @@ const projects = [
   },
   {
     title: "Espace de commentaires",
-    description: "Ce projet avait pour but de créer un espace dynamique d'ajout de commentaire.",
+    description:
+      "Ce projet avait pour but de créer un espace dynamique d'ajout de commentaire.",
     image: "./src/assets/image/imageEspaceCom.png",
     descriptionImage:
       "Image avec 3 faux commentaires et un formulaire pour ajouter des commentaires",
@@ -123,12 +128,12 @@ export default {
       activeModal.value = null;
     }
 
-    function scrollToFirstProject () {
-      const firstProject = document.getElementById("firstProject")
+    function scrollToFirstProject() {
+      const firstProject = document.getElementById("firstProject");
       if (firstProject) {
         firstProject.scrollIntoView({
-        behavior: "smooth"
-      })
+          behavior: "smooth",
+        });
       }
     }
 
@@ -141,7 +146,6 @@ export default {
     };
   },
 };
-
 </script>
 
 <style scoped>

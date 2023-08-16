@@ -12,7 +12,9 @@ html {
   color: #270304;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -22,7 +24,8 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   font-weight: normal;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -31,6 +34,7 @@ img {
   height: auto;
 }
 
+/* Personalisation */
 h1 {
   font-size: 50px;
   font-weight: bold;
@@ -61,7 +65,8 @@ a:hover {
   opacity: 70%;
   transition: 500ms ease-in-out;
 }
-button:hover{
+
+button:hover {
   cursor: pointer;
   transition: 400ms ease-in-out;
   opacity: 70%;
