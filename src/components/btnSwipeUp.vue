@@ -1,6 +1,11 @@
 <template>
-  <button id="swipeUp" @click="returnTop" data-aos="fade-up" data-aos-anchor="#project">
-    <img src="../assets/image/swipe-up.png" alt="fléche vers le haut" />
+  <button
+    id="swipeUp"
+    @click="returnTop"
+    data-aos="fade-up"
+    data-aos-anchor="#project"
+  >
+    <img src="../assets/image/swipe-up.png" alt="fléche vers le haut" data-aos="fade-up" data-aos-anchor="#project"/>
   </button>
 </template>
 
@@ -20,12 +25,16 @@
 }
 </style>
 
-<script setup>
-function returnTop() {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
-}
+<script>
+export default {
+  methods: {
+    returnTop() {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    },
+  },
+};
 </script>

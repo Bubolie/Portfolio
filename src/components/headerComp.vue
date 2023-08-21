@@ -50,6 +50,7 @@ header {
 .menu__item {
   margin: 10px 25px;
   font-size: 25px;
+  text-align: center;
 }
 
 .menu__item a {
@@ -58,7 +59,7 @@ header {
 }
 
 .menu__item:hover {
-  transition: 1s ease;
+  transition: 300ms ease-in-out;
   font-size: 20px;
   border-left: solid 1px #93b5f4;
   border-right: solid 1px #93b5f4;

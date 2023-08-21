@@ -2,18 +2,24 @@
   <section id="project">
     <div class="container title">
       <h1
+        class="title"
         data-aos="fade-down"
-        data-aos-easing="ease-in-out"
-        data-aos-duration="3000"
-        data-oas-anchor-placement="bottom-bottom"
+        data-aos-easing="linear"
+        data-aos-duration="2000"
       >
         Maintenant, découvrez les différents projets que j'ai déjà réalisé...
       </h1>
-      <div data-aos="fade-down" data-aos-delay="1000" data-aos-duration="2000">
+      <div
+        class="title__button"
+        data-aos="fade-down"
+        data-aos-easing="ease-in"
+        data-aos-duration="1500"
+        data-oas-anchor-placement="top-top"
+      >
         <button @click="scrollToFirstProject" id="down">
           <img
             src="../assets/image/arrow.png"
-            alt="double flèche vers le bas"
+            alt="Double flèche vers le bas"
           />
         </button>
       </div>
@@ -31,13 +37,13 @@
         data-aos="fade-up"
         data-aos-easing="ease-in-sine"
         data-aos-duration="1500"
-        data-oas-anchor-placement="bottom-bottom"
+        data-oas-anchor-placement="bottom-top"
       />
       <div
         class="creation__info"
         data-aos="fade-left"
         data-aos-easing="ease-in-sine"
-        data-aos-duration="3000"
+        data-aos-duration="2500"
         data-oas-anchor-placement="bottom-top"
       >
         <h2 class="creation__title">{{ project.title }}</h2>
@@ -66,7 +72,7 @@
 </template>
 
 <script>
-import modal from "./modal.vue";
+import modal from "../components/modal.vue";
 import { ref } from "vue";
 
 const projects = [
@@ -165,8 +171,9 @@ export default {
 }
 
 .creation__info {
-  margin: 20px;
+  padding: 2%;
   text-align: center;
+  border-left: solid #400738;
 }
 
 .creation__title {
@@ -182,10 +189,6 @@ export default {
   min-width: 200px;
   max-width: 400px;
   margin: 5%;
-}
-
-.creation__image:hover {
-  box-shadow: 25px 15px 15px;
 }
 
 .creation__moreDetail {

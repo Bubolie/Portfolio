@@ -16,7 +16,7 @@ export default {
       this.email = "";
       this.subject = "";
       this.message = "";
-      alert("Merci pour message !");
+      alert("Merci pour votre message !");
     },
   },
 };
@@ -44,6 +44,8 @@ export default {
           v-model="firstName"
           class="container__nametext text"
           placeholder="Prénom"
+          autocomplete="given-name"
+          required
         />
         <input
           type="text"
@@ -51,6 +53,7 @@ export default {
           v-model="lastName"
           class="container__nametext text"
           placeholder="Nom"
+          autocomplete="family-name"
           required
         />
       </div>
@@ -60,6 +63,7 @@ export default {
         v-model="email"
         class="container__email text"
         placeholder="Votre e-mail"
+        autocomplete="email"
         required
       />
       <input
