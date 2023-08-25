@@ -13,7 +13,7 @@
           href="https://www.linkedin.com/in/elodie-besen-001512283/"
           target="_blank"
           rel="icon"
-          ><img src="../assets/image/linkedin.png" alt="Lien vers linkedin"
+          ><img src="../assets/image/linkedin.png" alt="Lien vers LinkedIn"
         /></a>
       </figure>
     </div>

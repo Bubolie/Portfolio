@@ -16,11 +16,11 @@ import { RouterView } from "vue-router";
           <a href="#contact">Me contacter</a>
         </li>
       </ul>
-      <img
+        <img
         class="menu__logo"
         src="../assets/image/gif/logoEB.gif"
         alt="Logo avec les initiales E et B en violet sur fond crème"
-      />
+      />            
     </nav>
   </header>
 
@@ -32,14 +32,14 @@ header {
   padding: 1em;
   background-color: #400738;
   border-bottom: solid #93b5f4 6px;
+  position: relative;
 }
 
 .menu {
   height: 75px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  position: sticky;
+  justify-content: space-evenly;
 }
 
 .menu__list {
@@ -67,18 +67,19 @@ header {
   text-decoration: underline #93b5f4;
 }
 
+
 .menu__logo {
-  position: fixed;
   width: 75px;
-  right: 1em;
-  top: 1em;
+  position: fixed;
   border: 3px solid #93b5f4;
   border-radius: 20%;
+  top: 0;
+  right: 0;
+  margin: 1em;
 }
 
 .menu__logo:hover {
-  width: 250px;
+  width: 20%;
   transition: 1500ms ease-in-out;
-  z-index: 2;
-}
+  }
 </style>

@@ -114,7 +114,7 @@ const projects = [
     textLink: "Pour voir sur GitHub, cliquez ",
     link: "https://github.com/Bubolie/espaceDeCommentaire.git",
   },
-  // d'autres porjets peuvent être ajouter ici
+  // d'autres projets peuvent être ajouter ici
 ];
 
 export default {
