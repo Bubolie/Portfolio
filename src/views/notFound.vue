@@ -16,7 +16,7 @@ export default {
       class="not-found__image"
       src="../assets/image/404-error.png"
       title="Code Erreur"
-      alt="Schema d'un ordinateur bleu avec les yeux en forme de croix et une bouche en 'W' "
+      alt="Schema d'un ordinateur violet avec les yeux en forme de croix et une bouche en 'W' "
     />
     <p class="not-found__text">
       La page que vous cherchez n'existe pas, merci de revenir à la page
@@ -33,6 +33,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 70vh;
 }
 .not-found__title {
   font-size: 40px;

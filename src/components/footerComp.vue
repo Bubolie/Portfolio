@@ -13,7 +13,7 @@
           href="https://www.linkedin.com/in/elodie-besen-001512283/"
           target="_blank"
           rel="icon"
-          ><img src="../assets/image/linkedin.png" alt="Lien vers linkedin"
+          ><img src="../assets/image/linkedin.png" alt="Lien vers LinkedIn"
         /></a>
       </figure>
     </div>
@@ -21,7 +21,7 @@
       <small
         >Copyright 2023 <br />
         Dernière mise à jour
-        <time datetime="2023-07-13">14 août 2023</time></small
+        <time datetime="2023-08-28">28 août 2023</time></small
       >
     </div>
   </footer>

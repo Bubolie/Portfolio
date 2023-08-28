@@ -91,7 +91,7 @@ const projects = [
   {
     title: "Cahier des Charges",
     description:
-      "Ce projet avait pour but de créer d'un cahier des charge d'une entrprise fictive La Socketterie.",
+      "Ce projet avait pour but de créer d'un cahier des charges d'une entrprise fictive La Socketterie.",
     image: "./src/assets/image/imageCDC.png",
     descriptionImage:
       "Page de couverture d'un cahier des charges pour la Socketterie en rose et noire",
@@ -114,7 +114,7 @@ const projects = [
     textLink: "Pour voir sur GitHub, cliquez ",
     link: "https://github.com/Bubolie/espaceDeCommentaire.git",
   },
-  // d'autres porjets peuvent être ajouter ici
+  // d'autres projets peuvent être ajouter ici
 ];
 
 export default {
@@ -170,10 +170,12 @@ export default {
   margin: 20px;
 }
 
+
 .creation__info {
   padding: 2%;
   text-align: center;
   border-left: solid #400738;
+  width: 40vw;
 }
 
 .creation__title {
