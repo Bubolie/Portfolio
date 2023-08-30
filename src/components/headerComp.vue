@@ -16,11 +16,11 @@ import { RouterView } from "vue-router";
           <a href="#contact">Me contacter</a>
         </li>
       </ul>
-        <img
+      <img
         class="menu__logo"
         src="../assets/image/gif/logoEB.gif"
         alt="Logo avec les initiales E et B en violet sur fond crème"
-      />            
+      />
     </nav>
   </header>
 
@@ -67,7 +67,6 @@ header {
   text-decoration: underline #93b5f4;
 }
 
-
 .menu__logo {
   width: 75px;
   position: fixed;
@@ -81,5 +80,5 @@ header {
 .menu__logo:hover {
   width: 20%;
   transition: 1500ms ease-in-out;
-  }
+}
 </style>

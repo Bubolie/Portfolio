@@ -1,23 +1,28 @@
 <script>
+import { ref } from "vue";
 export default {
-  data() {
-    return {
+  setup() {
+    const dataForm = ref({
       firstName: "",
       lastName: "",
       email: "",
       subject: "",
       message: "",
+    });
+    function submitForm() {
+      dataForm.value.firstName = "";
+      dataForm.value.lastName = "";
+      dataForm.value.email = "";
+      dataForm.value.subject = "";
+      dataForm.value.message = "";
+      alert(
+        "Vous allez être redirigé vers votre messagerie par défaut pour finir d'envoyer le mail. Encore merci pour votre message !"
+      );
+    }
+    return {
+      dataForm,
+      submitForm,
     };
-  },
-  methods: {
-    submitForm() {
-      this.firstName = "";
-      this.lastName = "";
-      this.email = "";
-      this.subject = "";
-      this.message = "";
-      alert("Merci pour votre message !");
-    },
   },
 };
 </script>
@@ -41,7 +46,6 @@ export default {
         <input
           type="text"
           name="first-name"
-          v-model="firstName"
           class="container__nametext text"
           placeholder="Prénom"
           autocomplete="given-name"
@@ -50,7 +54,6 @@ export default {
         <input
           type="text"
           name="last-name"
-          v-model="lastName"
           class="container__nametext text"
           placeholder="Nom"
           autocomplete="family-name"
@@ -60,7 +63,6 @@ export default {
       <input
         type="email"
         name="email"
-        v-model="email"
         class="container__email text"
         placeholder="Votre e-mail"
         autocomplete="email"
@@ -69,7 +71,6 @@ export default {
       <input
         type="text"
         name="subject"
-        v-model="subject"
         class="container__subject text"
         placeholder="Objet du message"
         required
@@ -77,7 +78,6 @@ export default {
       <textarea
         type="text"
         name="message"
-        v-model="message"
         class="container__message text"
         placeholder="Votre message..."
         required

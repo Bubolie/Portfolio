@@ -5,7 +5,12 @@
     data-aos="fade-up"
     data-aos-anchor="#project"
   >
-    <img src="../assets/image/swipe-up.png" alt="fléche vers le haut" data-aos="fade-up" data-aos-anchor="#project"/>
+    <img
+      src="../assets/image/swipe-up.png"
+      alt="fléche vers le haut"
+      data-aos="fade-up"
+      data-aos-anchor="#project"
+    />
   </button>
 </template>
 
@@ -27,13 +32,16 @@
 
 <script>
 export default {
-  methods: {
-    returnTop() {
+  setup() {
+    function returnTop() {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
-    },
+    }
+    return {
+      returnTop,
+    };
   },
 };
 </script>
