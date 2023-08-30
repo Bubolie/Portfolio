@@ -10,18 +10,23 @@ export default {
       message: "",
     });
     function submitForm() {
+      alert(
+        "Vous allez être redirigé vers votre messagerie par défaut pour finir d'envoyer le mail.Encore merci pour votre message !"
+      );
+    }
+
+    function eraseForm() {
       dataForm.value.firstName = "";
       dataForm.value.lastName = "";
       dataForm.value.email = "";
       dataForm.value.subject = "";
       dataForm.value.message = "";
-      alert(
-        "Vous allez être redirigé vers votre messagerie par défaut pour finir d'envoyer le mail. Encore merci pour votre message !"
-      );
     }
+
     return {
       dataForm,
       submitForm,
+      eraseForm,
     };
   },
 };
@@ -47,6 +52,7 @@ export default {
           type="text"
           name="first-name"
           class="container__nametext text"
+          v-model="dataForm.firstName"
           placeholder="Prénom"
           autocomplete="given-name"
           required
@@ -55,6 +61,7 @@ export default {
           type="text"
           name="last-name"
           class="container__nametext text"
+          v-model="dataForm.lastName"
           placeholder="Nom"
           autocomplete="family-name"
           required
@@ -64,6 +71,7 @@ export default {
         type="email"
         name="email"
         class="container__email text"
+        v-model="dataForm.email"
         placeholder="Votre e-mail"
         autocomplete="email"
         required
@@ -72,6 +80,7 @@ export default {
         type="text"
         name="subject"
         class="container__subject text"
+        v-model="dataForm.subject"
         placeholder="Objet du message"
         required
       />
@@ -79,11 +88,18 @@ export default {
         type="text"
         name="message"
         class="container__message text"
+        v-model="dataForm.message"
         placeholder="Votre message..."
         required
       />
-      <div class="container__button">
-        <button type="submit" class="container__buttontext text">
+      <div class="container__buttons">
+         <button
+        type="reset"
+        @click="eraseForm"
+        class="container__buttontext text">
+        Effacer le formulaire
+      </button>
+      <button type="submit" class="container__buttontext text">
           Envoyer
         </button>
       </div>
@@ -138,8 +154,9 @@ export default {
   min-height: 100px;
 }
 
-.container__button {
-  text-align: end;
+.container__buttons {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .container__buttontext {
