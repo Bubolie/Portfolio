@@ -114,7 +114,8 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  width: auto;
 }
 
 .contact__presentation {
