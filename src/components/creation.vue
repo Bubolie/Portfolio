@@ -57,7 +57,6 @@
 
     <Transition name="modal">
       <modal
-        :modalVisible="showModal !== null"
         :title="showModal ? showModal.title : ''"
         :lang="showModal ? showModal.lang : ''"
         :logiciel="showModal ? showModal.logiciel : ''"

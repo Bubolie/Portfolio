@@ -1,5 +1,5 @@
 <template>
-  <div v-if="modalVisible" class="modal__overlay" @click="$emit('close')">
+  <div class="modal__overlay" @click="$emit('close')">
     <div class="modal__border" @click.stop>
       <button class="modal__button" @click="$emit('close')">X</button>
       <div class="modal__container">
@@ -26,7 +26,6 @@
 <script>
 export default {
   props: {
-    modalVisible: Boolean,
     title: String,
     lang: String,
     logiciel: String,

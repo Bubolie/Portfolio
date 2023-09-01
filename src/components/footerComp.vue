@@ -19,7 +19,7 @@
       <small
         >Copyright 2023 <br />
         Dernière mise à jour
-        <time datetime="2023-08-30">30 août 2023</time></small
+        <time datetime="2023-09-01">1 septembre 2023</time></small
       >
     </div>
   </footer>
