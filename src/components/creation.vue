@@ -199,8 +199,7 @@ export default {
   transition: opacity 2s;
 }
 
-.modal-enter-from,
-.modal-leave-to- {
+.modal-enter-from {
   opacity: 0;
 }
 
