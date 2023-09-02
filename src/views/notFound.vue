@@ -1,14 +1,3 @@
-<script>
-export default {
-  name: "notFound",
-  methods: {
-    before() {
-      this.$router.go(-1);
-    },
-  },
-};
-</script>
-
 <template>
   <div class="not-found">
     <h1 class="not-found__title">404 - Page non trouvée</h1>
@@ -20,7 +9,7 @@ export default {
     />
     <p class="not-found__text">
       La page que vous cherchez n'existe pas, merci de revenir à la page
-      d'accueil en cliquant 
+      d'accueil en cliquant
       <router-link to="/">ici</router-link>
     </p>
   </div>

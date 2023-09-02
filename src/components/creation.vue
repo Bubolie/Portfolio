@@ -14,7 +14,6 @@
         data-aos="fade-down"
         data-aos-easing="ease-in"
         data-aos-duration="1500"
-        data-oas-anchor-placement="top-top"
       >
         <button @click="scrollToFirstProject" id="down">
           <img
@@ -49,7 +48,7 @@
         <h2 class="creation__title">{{ project.title }}</h2>
         <p class="creation__description">{{ project.description }}</p>
         <div id="button-modal">
-          <button class="creation__moreDetail" @click="showModal(project)">
+          <button class="creation__moreDetail" @click="showModal = project">
             Plus de détail
           </button>
         </div>
@@ -58,14 +57,14 @@
 
     <Transition name="modal">
       <modal
-        :modalVisible="activeModal !== null"
-        :title="activeModal ? activeModal.title : ''"
-        :lang="activeModal ? activeModal.lang : ''"
-        :logiciel="activeModal ? activeModal.logiciel : ''"
-        :date="activeModal ? activeModal.date : ''"
-        :textLink="activeModal ? activeModal.textLink : ''"
-        :link="activeModal ? activeModal.link : ''"
-        @close="hideModal"
+        :title="showModal ? showModal.title : ''"
+        :lang="showModal ? showModal.lang : ''"
+        :logiciel="showModal ? showModal.logiciel : ''"
+        :date="showModal ? showModal.date : ''"
+        :textLink="showModal ? showModal.textLink : ''"
+        :link="showModal ? showModal.link : ''"
+        v-show="showModal !== null"
+        @close="showModal = null"
       />
     </Transition>
   </section>
@@ -122,17 +121,7 @@ export default {
     modal,
   },
   setup() {
-    const activeModal = ref(null);
-
-    function showModal(project) {
-      document.body.style.overflow = "hidden";
-      activeModal.value = project;
-    }
-
-    function hideModal() {
-      document.body.style.overflow = "auto";
-      activeModal.value = null;
-    }
+    const showModal = ref(null);
 
     function scrollToFirstProject() {
       const firstProject = document.getElementById("firstProject");
@@ -144,9 +133,7 @@ export default {
     }
 
     return {
-      activeModal,
       showModal,
-      hideModal,
       projects,
       scrollToFirstProject,
     };
@@ -166,10 +153,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 100vh;
+  min-height: 100vh;
+  width: auto;
   margin: 20px;
 }
-
 
 .creation__info {
   padding: 2%;
@@ -209,11 +196,10 @@ export default {
 }
 
 .modal-enter-active {
-  transition: opacity 2000ms;
+  transition: opacity 2s;
 }
 
-.modal-enter-from,
-.modal-leave-to- {
+.modal-enter-from {
   opacity: 0;
 }
 

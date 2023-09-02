@@ -1,23 +1,33 @@
 <script>
+import { ref } from "vue";
 export default {
-  data() {
-    return {
+  setup() {
+    const dataForm = ref({
       firstName: "",
       lastName: "",
       email: "",
       subject: "",
       message: "",
+    });
+    function submitForm() {
+      alert(
+        "Vous allez être redirigé vers votre messagerie par défaut pour finir d'envoyer le mail.Encore merci pour votre message !"
+      );
+    }
+
+    function eraseForm() {
+      dataForm.value.firstName = "";
+      dataForm.value.lastName = "";
+      dataForm.value.email = "";
+      dataForm.value.subject = "";
+      dataForm.value.message = "";
+    }
+
+    return {
+      dataForm,
+      submitForm,
+      eraseForm,
     };
-  },
-  methods: {
-    submitForm() {
-      this.firstName = "";
-      this.lastName = "";
-      this.email = "";
-      this.subject = "";
-      this.message = "";
-      alert("Merci pour votre message !");
-    },
   },
 };
 </script>
@@ -41,8 +51,8 @@ export default {
         <input
           type="text"
           name="first-name"
-          v-model="firstName"
           class="container__nametext text"
+          v-model="dataForm.firstName"
           placeholder="Prénom"
           autocomplete="given-name"
           required
@@ -50,8 +60,8 @@ export default {
         <input
           type="text"
           name="last-name"
-          v-model="lastName"
           class="container__nametext text"
+          v-model="dataForm.lastName"
           placeholder="Nom"
           autocomplete="family-name"
           required
@@ -60,8 +70,8 @@ export default {
       <input
         type="email"
         name="email"
-        v-model="email"
         class="container__email text"
+        v-model="dataForm.email"
         placeholder="Votre e-mail"
         autocomplete="email"
         required
@@ -69,21 +79,27 @@ export default {
       <input
         type="text"
         name="subject"
-        v-model="subject"
         class="container__subject text"
+        v-model="dataForm.subject"
         placeholder="Objet du message"
         required
       />
       <textarea
         type="text"
         name="message"
-        v-model="message"
         class="container__message text"
+        v-model="dataForm.message"
         placeholder="Votre message..."
         required
       />
-      <div class="container__button">
-        <button type="submit" class="container__buttontext text">
+      <div class="container__buttons">
+         <button
+        type="reset"
+        @click="eraseForm"
+        class="container__buttontext text">
+        Effacer le formulaire
+      </button>
+      <button type="submit" class="container__buttontext text">
           Envoyer
         </button>
       </div>
@@ -98,7 +114,8 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  width: auto;
 }
 
 .contact__presentation {
@@ -138,8 +155,9 @@ export default {
   min-height: 100px;
 }
 
-.container__button {
-  text-align: end;
+.container__buttons {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .container__buttontext {
